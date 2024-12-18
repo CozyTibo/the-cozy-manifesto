@@ -83,8 +83,13 @@ header a:hover {
     color: #333;
 }
 
+/* Menu Item Hover - Text and Icon */
 .menu-item:hover {
-    color: #e86b00; /* Orange on hover */
+    color: #e86b00; /* Orange for text */
+}
+
+.menu-item:hover p {
+    color: #e86b00; /* Ensure the paragraph text changes color */
 }
 
 .menu-item:hover img {
@@ -182,13 +187,13 @@ html {
     }
 
     .menu {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap; /* Ensure items wrap to the next row */
+        justify-content: space-between; /* Space items evenly */
     }
 
     .menu-item {
-        max-width: 100%; /* Take full width */
-        margin-bottom: 20px;
+        flex: 0 1 calc(50% - 10px); /* Take 50% of the row, minus a small gap */
+        margin-bottom: 20px; /* Add spacing between rows */
     }
 
     .menu-item img {
